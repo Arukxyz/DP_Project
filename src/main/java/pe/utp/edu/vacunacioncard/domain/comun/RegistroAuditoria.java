@@ -1,0 +1,29 @@
+package pe.utp.edu.vacunacioncard.domain.comun;
+
+import java.time.LocalDateTime;
+
+import lombok.Getter;
+import lombok.Setter;
+import pe.utp.edu.vacunacioncard.domain.usuario.Usuario;
+
+@Getter
+@Setter
+public class RegistroAuditoria {
+    private String id;
+    private Usuario usuario;
+    private String accion;
+    private String entidadAfectada;
+    private String idEntidad;
+    private String detalles;
+    private LocalDateTime fechaHora;
+    private String ipAddress;
+
+    public RegistroAuditoria(Usuario usuario, String accion, String entidadAfectada, String detalles) {
+        this.id = java.util.UUID.randomUUID().toString();
+        this.usuario = usuario;
+        this.accion = accion;
+        this.entidadAfectada = entidadAfectada;
+        this.detalles = detalles;
+        this.fechaHora = LocalDateTime.now();
+    }
+}

@@ -1,0 +1,34 @@
+package pe.utp.edu.vacunacioncard.domain.vacunacion;
+
+import java.time.LocalDateTime;
+
+import lombok.Getter;
+import lombok.Setter;
+import pe.utp.edu.vacunacioncard.domain.usuario.Enfermero;
+import pe.utp.edu.vacunacioncard.domain.usuario.Paciente;
+
+@Getter
+@Setter
+public class AplicacionDosis {
+    private String id;
+    private Paciente paciente;
+    private Vacuna vacuna;
+    private int dosisNumero;
+    private LocalDateTime fechaHora;
+    private Enfermero enfermero;
+    private String loteVacuna;
+    private String sitioInyeccion;
+    private boolean exito;
+    private String observaciones;
+
+    public AplicacionDosis(Paciente paciente, Vacuna vacuna, int dosisNumero, Enfermero enfermero, String loteVacuna) {
+        this.id = java.util.UUID.randomUUID().toString();
+        this.paciente = paciente;
+        this.vacuna = vacuna;
+        this.dosisNumero = dosisNumero;
+        this.enfermero = enfermero;
+        this.loteVacuna = loteVacuna;
+        this.fechaHora = LocalDateTime.now();
+        this.exito = true;
+    }
+}

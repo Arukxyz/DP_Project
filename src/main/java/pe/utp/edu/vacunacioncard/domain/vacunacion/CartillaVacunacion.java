@@ -1,0 +1,29 @@
+package pe.utp.edu.vacunacioncard.domain.vacunacion;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import lombok.Getter;
+import lombok.Setter;
+import pe.utp.edu.vacunacioncard.domain.usuario.Paciente;
+
+@Getter
+@Setter
+public class CartillaVacunacion {
+    private String id;
+    private Paciente paciente;
+    private String codigoQR;
+    private List<RegistroVacuna> registrosVacunacion;
+    private List<EsquemaVacunacion> esquemasAsignados;
+    private boolean activa;
+    private String estado;
+
+    public CartillaVacunacion(Paciente paciente) {
+        this.id = java.util.UUID.randomUUID().toString();
+        this.paciente = paciente;
+        this.registrosVacunacion = new ArrayList<>();
+        this.esquemasAsignados = new ArrayList<>();
+        this.activa = true;
+        this.estado = "ACTIVA";
+    }
+}

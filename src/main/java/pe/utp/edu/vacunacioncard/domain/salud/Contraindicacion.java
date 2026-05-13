@@ -1,0 +1,21 @@
+package pe.utp.edu.vacunacioncard.domain.salud;
+
+import lombok.Getter;
+import lombok.Setter;
+import pe.utp.edu.vacunacioncard.domain.vacunacion.Vacuna;
+
+@Getter
+@Setter
+public class Contraindicacion {
+    private String id;
+    private String descripcion;
+    private String severidad;
+    private String condicionAsociada;
+    private Vacuna vacunaAfectada;
+
+    public Contraindicacion(String descripcion, String severidad) {
+        this.id = java.util.UUID.randomUUID().toString();
+        this.descripcion = descripcion;
+        this.severidad = severidad;
+    }
+}
