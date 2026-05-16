@@ -11,20 +11,13 @@ import pe.utp.edu.vacunacioncard.domain.vacunacion.RegistroVacuna;
 @Getter
 @Setter
 @NoArgsConstructor
-public class NotificacionRecordatorio implements Notificacion {
-    private String id;
-    private Usuario destinatario;
-    private String mensaje;
+public class NotificacionRecordatorio extends Notificacion {
     private RegistroVacuna registroVacuna;
-    private LocalDateTime fechaEnvio;
-    private String estado;
     private LocalDateTime fechaRecordatorio;
 
     public NotificacionRecordatorio(Usuario destinatario, RegistroVacuna registroVacuna, LocalDateTime fechaRecordatorio) {
-        this.id = java.util.UUID.randomUUID().toString();
-        this.destinatario = destinatario;
+        super(destinatario, "Recordatorio de próxima dosis");
         this.registroVacuna = registroVacuna;
         this.fechaRecordatorio = fechaRecordatorio;
-        this.estado = "PENDIENTE";
     }
 }
