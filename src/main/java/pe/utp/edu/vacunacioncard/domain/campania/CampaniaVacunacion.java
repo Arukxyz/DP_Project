@@ -5,11 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import pe.utp.edu.vacunacioncard.domain.vacunacion.Vacuna;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class CampaniaVacunacion {
     private String id;
     private String nombre;

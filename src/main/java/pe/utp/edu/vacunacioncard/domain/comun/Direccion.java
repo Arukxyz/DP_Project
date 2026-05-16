@@ -1,10 +1,14 @@
 package pe.utp.edu.vacunacioncard.domain.comun;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Direccion {
     private String calle;
     private String numero;
@@ -12,13 +16,4 @@ public class Direccion {
     private String distrito;
     private String provincia;
     private String codigoPostal;
-
-    public Direccion (String calle, String numero, String departamento, String provincia, String distrito, String codigoPostal){
-        this.calle = calle;
-        this.numero = numero;
-        this.departamento = departamento;
-        this.distrito = distrito;
-        this.provincia = provincia;
-        this.codigoPostal = codigoPostal;
-    }
 }

@@ -3,11 +3,13 @@ package pe.utp.edu.vacunacioncard.domain.vacunacion;
 import java.time.LocalDateTime;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import pe.utp.edu.vacunacioncard.domain.usuario.Enfermero;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class RegistroVacuna {
     private String id;
     private Vacuna vacuna;

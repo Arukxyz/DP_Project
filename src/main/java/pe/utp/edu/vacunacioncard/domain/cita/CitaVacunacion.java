@@ -3,12 +3,14 @@ package pe.utp.edu.vacunacioncard.domain.cita;
 import java.time.LocalDateTime;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import pe.utp.edu.vacunacioncard.domain.usuario.Paciente;
 import pe.utp.edu.vacunacioncard.domain.vacunacion.Vacuna;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class CitaVacunacion {
     private String id;
     private Paciente paciente;

@@ -3,12 +3,14 @@ package pe.utp.edu.vacunacioncard.domain.notificacion;
 import java.time.LocalDateTime;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import pe.utp.edu.vacunacioncard.domain.usuario.Usuario;
 import pe.utp.edu.vacunacioncard.domain.vacunacion.RegistroVacuna;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class NotificacionRecordatorio implements Notificacion {
     private String id;
     private Usuario destinatario;

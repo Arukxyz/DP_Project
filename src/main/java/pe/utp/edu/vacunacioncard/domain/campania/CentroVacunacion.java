@@ -1,12 +1,14 @@
 package pe.utp.edu.vacunacioncard.domain.campania;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import pe.utp.edu.vacunacioncard.domain.comun.Contacto;
 import pe.utp.edu.vacunacioncard.domain.comun.Direccion;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class CentroVacunacion {
     private String id;
     private String nombre;

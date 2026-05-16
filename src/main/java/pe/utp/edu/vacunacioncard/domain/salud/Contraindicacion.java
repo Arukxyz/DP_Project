@@ -1,11 +1,13 @@
 package pe.utp.edu.vacunacioncard.domain.salud;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import pe.utp.edu.vacunacioncard.domain.vacunacion.Vacuna;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class Contraindicacion {
     private String id;
     private String descripcion;

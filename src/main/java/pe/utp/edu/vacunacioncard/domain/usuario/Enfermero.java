@@ -3,10 +3,12 @@ package pe.utp.edu.vacunacioncard.domain.usuario;
 import java.time.LocalDate;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class Enfermero extends Usuario{
     private String colegiatura;
     private String especialidad;

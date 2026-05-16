@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class Rol {
-private String id;
+    private String id;
     private String nombre;
     private String descripcion;
     private List<Permiso> permisos;
